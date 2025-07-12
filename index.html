@@ -1,302 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PARAGON | Home</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-<style>
-  body {
-    margin:0;
-    font-family:'Segoe UI',sans-serif;
-    background:url('back.png') center/cover no-repeat fixed;
-    color:white; position:relative;
-    overflow-x:hidden;
-    scroll-behavior: smooth;
-  }
-  body::after {
-    content:"";position:fixed;top:0;left:0;width:100%;height:100%;
-    background:rgba(1,57,180,0.7);z-index:-1;
-  }
-  .header {
-    height:100vh; display:flex; flex-direction:column;
-    justify-content:center; align-items:center;
-    text-align:center;
-    opacity:0; transform:scale(0.95);
-    animation: headerEnter 1.2s ease-out forwards;
-  }
-  @keyframes headerEnter { to { opacity:1; transform:scale(1);} }
-  .logo-small { width:180px; margin-bottom:15px; animation: fadeInLogo 1s ease-out forwards; opacity:0; }
-  @keyframes fadeInLogo { to { opacity:1; } }
-  .welcome-text { font-size:1.8rem; font-weight:600; }
-  h1 { font-size:2.6rem; font-weight:bold; margin-top:5px; }
-  .book-now-btn {
-    margin-top:25px;
-    background:#28a745;
-    color:white;
-    font-weight:600;
-    padding:10px 20px;
-    border-radius:25px;
-    font-size:1.05rem;
-    text-decoration:none;
-    animation:pulse 2.5s infinite;
-    transition:transform .2s;
-    display: inline-block;
-  }
-  @keyframes pulse {
-    0%,100% { transform:scale(1); box-shadow:0 0 0 rgba(40,167,69,0.7); }
-    50% { transform:scale(1.04); box-shadow:0 0 12px rgba(40,167,69,0.7); }
-  }
-  .book-now-btn:hover { background:#218838; transform:scale(1.05); }
-  .navbar-nav .nav-link { font-size: 15px; font-weight: 500; }
-  .navbar-brand { font-size: 15px; }
-  section { padding:60px 10px; }
-  .service-card {
-    background:rgba(255,255,255,0.1);
-    border:1px solid rgba(255,255,255,0.15);
-    backdrop-filter:blur(5px);
-    border-radius:12px;
-    padding:20px;
-    text-align:center;
-    transition:transform .3s,box-shadow .3s;
-    min-height:260px;
-    display:flex; flex-direction:column; justify-content:space-between;
-  }
-  .service-card:hover {
-    transform:translateY(-6px);
-    box-shadow:0 8px 25px rgba(255,255,255,0.2);
-  }
-  .service-icon {
-    font-size:2.5rem; color:#ffd700;
-    margin-bottom:12px; animation: iconBounce 2s ease-in-out infinite;
-  }
-  @keyframes iconBounce {
-    0%,100% { transform:translateY(0); }
-    50% { transform:translateY(-6px); }
-  }
-  .service-desc { font-size:0.92rem; margin-bottom:12px; }
-  .video-blur { filter:blur(4px); transition:filter .5s ease, transform .5s ease; }
-  .video-blur:hover { filter:none; transform:scale(1.02); }
-  #contact {
-    background:rgba(0,0,0,0.6); border-radius:10px;
-    padding:30px 15px; margin:40px auto;
-    max-width:500px; box-shadow:0 0 15px rgba(0,0,0,0.7);
-  }
-  .form-control {
-    background:rgba(255,255,255,0.1);
-    border:none; color:white;
-  }
-  .form-control::placeholder { color:#ddd; }
-  .btn-primary {
-    background:#0139b4;
-    border:none;
-    width:100%;
-    padding:10px;
-    font-weight:600;
-    transition:background .3s, transform .2s;
-  }
-  .btn-primary:hover {
-    background:#002780;
-    transform:scale(1.02);
-  }
-  footer {
-    background:rgba(0,0,0,0.6);
-    padding:15px;
-    color:#ccc;
-    text-align:center;
-  }
-  footer a {
-    color:white; margin:0 6px;
-    transition:color .3s;
-    font-size:1.4rem;
-  }
-  footer a:hover { color:#ffd700; }
-  @media(max-width:767px) {
-    .welcome-text { font-size:1.4rem; }
-    h1 { font-size:2.2rem; }
-    .service-desc { font-size:0.85rem; }
-    .nav-link { font-size:0.9rem; }
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PARAGON | Home</title>
+
+  <!-- Bootstrap & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('back.png') center center / cover no-repeat fixed;
+      color: white;
+      position: relative;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+    body::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(1, 57, 180, 0.7);
+      z-index: -1;
+    }
+    .header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      opacity: 0;
+      transform: scale(0.95);
+      animation: headerEnter 1.2s ease-out forwards;
+    }
+    @keyframes headerEnter {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    .logo-small {
+      width: 180px;
+      margin-bottom: 15px;
+      animation: fadeInLogo 1s ease-out forwards;
+      opacity: 0;
+    }
+    @keyframes fadeInLogo {
+      to {
+        opacity: 1;
+      }
+    }
+    .welcome-text {
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+    h1 {
+      font-size: 2.6rem;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+    .book-now-btn {
+      margin-top: 25px;
+      background: #28a745;
+      color: white;
+      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-size: 1.05rem;
+      text-decoration: none;
+      animation: pulse 2.5s infinite;
+      transition: transform 0.2s;
+      display: inline-block;
+    }
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(40, 167, 69, 0.7);
+      }
+      50% {
+        transform: scale(1.04);
+        box-shadow: 0 0 12px rgba(40, 167, 69, 0.7);
+      }
+    }
+    .book-now-btn:hover {
+      background: #218838;
+      transform: scale(1.05);
+    }
+    .navbar-nav .nav-link {
+      font-size: 15px;
+      font-weight: 500;
+    }
+    .navbar-brand {
+      font-size: 15px;
+    }
+    .services-section {
+      padding: 60px 10px;
+    }
+    .service-card {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(5px);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      min-height: 260px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: white;
+    }
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+    }
+    .service-icon {
+      font-size: 2.5rem;
+      color: #ffd700;
+      margin-bottom: 12px;
+      animation: iconBounce 2s ease-in-out infinite;
+    }
+    @keyframes iconBounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-6px);
+      }
+    }
+    .service-desc {
+      font-size: 0.95rem;
+      margin-bottom: 12px;
+    }
+    @media (max-width: 767px) {
+      .welcome-text {
+        font-size: 1.4rem;
+      }
+      h1 {
+        font-size: 2.2rem;
+      }
+      .nav-link {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
 </head>
 <body>
-
-<!-- Navbar 2 -->
-<nav class="navbar navbar-expand-lg fixed-top px-3" aria-label="Main navigation" style="background-color: #0139b4;">
-  <a class="navbar-brand text-white" href="#">
-    <img src="logo.png" height="50" class="me-2" alt="Paragon Logo">
-  </a>
-  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav2" aria-controls="nav2" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="nav2">
-    <ul class="navbar-nav ms-auto">
-      <li class="nav-item"><a class="nav-link text-white" href="about.html">About</a></li>
-      <li class="nav-item"><a class="nav-link text-white" href="#services">Service</a></li>
-      <li class="nav-item"><a class="nav-link text-white" href="#contact">Contact</a></li>
-      <li class="nav-item"><a class="nav-link text-white" href="#portfolio">Portfolio</a></li>
-    </ul>
-  </div>
-</nav>
-
-<!-- Header -->
-<header class="header">
-  <img src="logo-small.png" alt="Paragon logo" class="logo-small"/>
-  <div class="welcome-text">Welcome to Paragon</div>
-  <h1>Capturing Every Moment of Life</h1>
-  <a href="https://wa.me/94742323200?text=Hi%20Paragon%2C%20I%20want%20to%20book%20a%20service." target="_blank" class="book-now-btn" rel="noopener noreferrer">Book Now</a>
-</header>
-
-<!-- Services Section -->
-<section id="services">
-  <div class="container">
-    <h2 class="text-center mb-4">Our Services</h2>
-    <div class="row gy-4">
-
-      <div class="col-md-4">
-        <div class="service-card" id="service1">
-          <i class="fas fa-camera-retro service-icon"></i>
-          <h5>Wedding and Pre Shoots</h5>
-          <p class="service-desc">Capture your special day and pre-wedding moments with cinematic quality.</p>
-          <a href="contact.html?service=Wedding%20and%20Pre%20Shoots" class="book-now-btn">Book Now</a>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="service-card" id="service2">
-          <i class="fas fa-glass-cheers service-icon"></i>
-          <h5>Parties and Celebration</h5>
-          <p class="service-desc">Professional coverage of parties, anniversaries, and celebrations.</p>
-          <a href="contact.html?service=Parties%20and%20Celebration" class="book-now-btn">Book Now</a>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="service-card" id="service3">
-          <i class="fas fa-praying-hands service-icon"></i>
-          <h5>Religious Ceremonies</h5>
-          <p class="service-desc">Respectful coverage of cultural and spiritual ceremonies.</p>
-          <a href="contact.html?service=Religious%20Ceremonies" class="book-now-btn">Book Now</a>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="service-card" id="service4">
-          <i class="fas fa-briefcase service-icon"></i>
-          <h5>Corporate and Business Events</h5>
-          <p class="service-desc">Conference, launches & professional events coverage.</p>
-          <a href="contact.html?service=Corporate%20and%20Business%20Events" class="book-now-btn">Book Now</a>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="service-card" id="service5">
-          <i class="fas fa-graduation-cap service-icon"></i>
-          <h5>Preschool and University Functions</h5>
-          <p class="service-desc">Coverage for school events, graduations, and educational functions.</p>
-          <a href="contact.html?service=Preschool%20and%20University%20Functions" class="book-now-btn">Book Now</a>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="service-card" id="service6">
-          <i class="fas fa-video service-icon"></i>
-          <h5>Live Streaming</h5>
-          <p class="service-desc">Broadcast your events live with professional quality.</p>
-          <a href="contact.html?service=Live%20Streaming" class="book-now-btn">Book Now</a>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="service-card" id="service7">
-          <i class="fas fa-film service-icon"></i>
-          <h5>Documentaries</h5>
-          <p class="service-desc">Create compelling stories through documentary films.</p>
-          <a href="contact.html?service=Documentaries" class="book-now-btn">Book Now</a>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="service-card" id="service8">
-          <i class="fas fa-birthday-cake service-icon"></i>
-          <h5>Personal Milestones</h5>
-          <p class="service-desc">Capture birthdays, anniversaries, and personal milestones.</p>
-          <a href="contact.html?service=Personal%20Milestones" class="book-now-btn">Book Now</a>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="service-card" id="service9">
-          <i class="fas fa-scissors service-icon"></i>
-          <h5>Video Editing</h5>
-          <p class="service-desc">Professional editing services for your videos.</p>
-          <a href="contact.html?service=Video%20Editing" class="book-now-btn">Book Now</a>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="service-card" id="service10">
-          <i class="fas fa-music service-icon"></i>
-          <h5>Music Production</h5>
-          <p class="service-desc">High-quality music production and sound design.</p>
-          <a href="contact.html?service=Music%20Production" class="book-now-btn">Book Now</a>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="service-card" id="service11">
-          <i class="fas fa-camera service-icon"></i>
-          <h5>Custom Shoots</h5>
-          <p class="service-desc">Tailored shoots to fit your unique needs and ideas.</p>
-          <a href="contact.html?service=Custom%20Shoots" class="book-now-btn">Book Now</a>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="service-card" id="service12">
-          <i class="fas fa-calendar-check service-icon"></i>
-          <h5>Event Planning</h5>
-          <p class="service-desc">Complete event management and planning services.</p>
-          <a href="contact.html?service=Event%20Planning" class="book-now-btn">Book Now</a>
-        </div>
-      </div>
-
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top px-3" style="background-color: #0139b4;">
+    <a class="navbar-brand text-white" href="#">
+      <img src="logo.png" height="50" class="me-2" alt="Paragon Logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav2" aria-controls="nav2" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav2">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link text-white" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#services">Service</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#contact">Contact</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#portfolio">Portfolio</a></li>
+      </ul>
     </div>
-  </div>
-</section>
+  </nav>
 
-<!-- Portfolio Section -->
-<section id="portfolio" class="text-center my-5">
-  <div class="container">
-    <h2>Portfolio</h2>
-    <div class="ratio ratio-16x9" style="max-width:800px; margin:auto;">
-      <iframe 
-        src="https://www.youtube.com/embed/GPlSWfF2No8?si=ONzl9f1dtDkSYc0K" 
-        title="Paragon Portfolio Video"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen>
-      </iframe>
-    </div>
-  </div>
-</section>
+  <!-- Header -->
+  <header class="header">
+    <img src="logo-small.png" alt="Paragon logo" class="logo-small" />
+    <div class="welcome-text">Welcome to Paragon</div>
+    <h1>Capturing Every Moment of Life</h1>
+    <a href="https://wa.me/94742323200?text=Hi%20Paragon%2C%20I%20want%20to%20book%20a%20service." target="_blank" class="book-now-btn" rel="noopener noreferrer">Book Now</a>
+  </header>
 
-<!-- Contact Form -->
-<section id="contact" class="mx-auto my-5">
-  <h2 class="text-center mb-4">Contact Us</h2>
-  <form id="contactForm">
-    <div class="mb-3">
-      <label for="name" class="form-label">Name</label>
-      <input id="name" class="form-control" type="text" placeholder="Your name" required />
+  <!-- Services Section -->
+  <section id="services" class="services-section">
+    <div class="container">
+      <h2 class="text-center mb-5">Our Services</h2>
+      <div class="row gy-4">
+        <!-- Service Cards 1-12 -->
+        <!-- Repeat structure for each service -->
+        <!-- Sample Service Card -->
+        <div class="col-md-4">
+          <div class="service-card">
+            <i class="fas fa-camera-retro service-icon"></i>
+            <h5>Wedding and Pre Shoots</h5>
+            <p class="service-desc">Capture your special day and pre-wedding moments with cinematic quality.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-card">
+            <i class="fas fa-glass-cheers service-icon"></i>
+            <h5>Parties and Celebrations</h5>
+            <p class="service-desc">Professional coverage of parties, anniversaries, and celebrations.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-card">
+            <i class="fas fa-praying-hands service-icon"></i>
+            <h5>Religious Ceremonies</h5>
+            <p class="service-desc">Respectful coverage of cultural and spiritual ceremonies.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-card">
+            <i class="fas fa-briefcase service-icon"></i>
+            <h5>Corporate Events</h5>
+            <p class="service-desc">Professional video for business events and conferences.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-card">
+            <i class="fas fa-graduation-cap service-icon"></i>
+            <h5>Preschool and School Functions</h5>
+            <p class="service-desc">Capture academic milestones and memorable performances.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-card">
+            <i class="fas fa-video service-icon"></i>
+            <h5>Live Streaming</h5>
+            <p class="service-desc">Broadcast events online with professional quality.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-card">
+            <i class="fas fa-film service-icon"></i>
+            <h5>Documentaries</h5>
+            <p class="service-desc">Tell powerful stories through creative documentaries.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-card">
+            <i class="fas fa-birthday-cake service-icon"></i>
+            <h5>Personal Milestones</h5>
+            <p class="service-desc">Birthdays, anniversaries, and other life events.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-card">
+            <i class="fas fa-scissors service-icon"></i>
+            <h5>Video Editing</h5>
+            <p class="service-desc">Get professional edits for any type of video.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-card">
+            <i class="fas fa-music service-icon"></i>
+            <h5>Music Production</h5>
+            <p class="service-desc">High quality audio for your video or music project.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-card">
+            <i class="fas fa-camera service-icon"></i>
+            <h5>Custom Shoots</h5>
+            <p class="service-desc">Tailored videography services to your exact need.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-card">
+            <i class="fas fa-calendar-check service-icon"></i>
+            <h5>Event Planning</h5>
+            <p class="service-desc">From concept to execution for your event video.</p>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="mb-3">
-      <label for="email" class="form-label">Email</label>
-      <input id="email" class="form-control" type="email" placeholder="Your email" required />
-    </div>
-    <div class="mb-3">
-      <label for="phone" class="form-label">Phone Number</label>
-      <input id="phone" class="form-control" type="tel" placeholder="Your phone number" required />
-    </div>
-    <div class="mb-3">
-      <label for="message" class="form-label">Message</label>
-      <textarea id="message" class="form-control" rows="4" placeholder="Your message" required></textarea>
-    </div>
-    <button type="submit" class="btn btn-primary">Send Message</button>
-  </form>
-</section>
+  </section>
 
-<script>
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
   document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
 
