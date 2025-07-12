@@ -3,202 +3,152 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>PARAGON | Services</title>
+  <title>PARAGON</title>
 
-  <!-- Bootstrap CSS -->
-  https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css
-  https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css
+  <!-- Bootstrap CSS & Font Awesome -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"loudflare.com/ajax/libs/font-awesome/6.min.css
 
   <style>
     body {
       background-color: #0139b4;
       color: white;
       font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 30px 15px;
+      padding: 20px;
     }
-    .services-section {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    h2 {
-      font-weight: 700;
-      margin-bottom: 40px;
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(5px);
-      border-radius: 12px;
-      padding: 25px 20px;
+    h2, h3, h4, h5, h6 {
       text-align: center;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      height: 100%;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin-top: 30px;
+    }
+    .service-card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      margin-bottom: 20px;
+      backdrop-filter: blur(5px);
+      transition: transform 0.3s ease;
     }
     .service-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
+      transform: translateY(-5px);
     }
-    .service-icon {
-      font-size: 3rem;
-      color: #ffd700;
-      margin-bottom: 18px;
-      animation: bounce 2s infinite;
+    .footer {
+      background-color: rgba(1, 57, 180, 0.9);
+      padding: 20px;
+      text-align: center;
+      margin-top: 40px;
     }
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-8px); }
+    .footer a {
+      color: white;
+      margin: 0 10px;
+      font-size: 1.5rem;
     }
-    h5 {
-      font-weight: 600;
-      margin-bottom: 12px;
-      font-size: 1.25rem;
-    }
-    .service-desc {
-      font-size: 1rem;
-      line-height: 1.4;
-      flex-grow: 1;
-    }
-
-    /* Responsive */
     @media (max-width: 575.98px) {
-      h2 {
-        font-size: 2rem;
-        margin-bottom: 30px;
-      }
-      .service-icon {
-        font-size: 2.5rem;
-        margin-bottom: 14px;
-      }
-      h5 {
-        font-size: 1.1rem;
-      }
-      .service-desc {
-        font-size: 0.95rem;
-      }
-      footer {
-        padding: 20px 10px;
-        text-align: center;
-      }
-      footer p {
-        font-size: 0.9rem;
-      }
-      footer .d-flex {
-        flex-direction: column;
-        gap: 10px;
-      }
-      footer a {
-        font-size: 1.5rem;
+      .footer a {
+        display: block;
+        margin: 10px 0;
       }
     }
   </style>
 </head>
 <body>
 
-  <section id="services" class="services-section">
-    <h2>Our Services</h2>
+  <header class="text-center mb-4">
+    <h1>Welcome to Paragon</h1>
+    <h2>Capturing Every Moment of Life</h2>
+    <a href="https://wa.me/94742323200?text=Hi%20Paragon%2C%20I%20want%20to%20book%20a%20service." class="btn btn-warning mt-3>
+    <h3>Our Services</h3>
     <div class="container">
-      <div class="row gy-4">
-        <!-- Repeatable service cards -->
-        <div class="col-md-4">
-          <div class="service-card">
-            <i class="fas fa-camera-retro service-icon"></i>
-            <h5>Wedding and Pre Shoots</h5>
-            <p class="service-desc">Capture your special day and pre-wedding moments with cinematic quality.</p>
-          </div>
+      <div class="row">
+        <!-- Repeatable Service Cards -->
+        <div class="col-md-6 service-card">
+          <h5>Wedding and Pre Shoots</h5>
+          <p>Capture your special day and pre-wedding moments with cinematic quality.</p>
+          <a href="contact.html?service=Wedding%20and%20Pre%20Shoots" class="btn btn-light btn-sm">Book Now</a>
         </div>
-        <div class="col-md-4">
-          <div class="service-card">
-            <i class="fas fa-glass-cheers service-icon"></i>
-            <h5>Parties and Celebrations</h5>
-            <p class="service-desc">Professional coverage of parties, anniversaries, and celebrations.</p>
-          </div>
+        <div class="col-md-6 service-card">
+          <h5>Parties and Celebration</h5>
+          <p>Professional coverage of parties, anniversaries, and celebrations.</p>
+          <a href="contact.html?service=Parties%20and%20Celebration" class="btn btn-light btn-sm">Book Now</a>
         </div>
-        <div class="col-md-4">
-          <div class="service-card">
-            <i class="fas fa-praying-hands service-icon"></i>
-            <h5>Religious Ceremonies</h5>
-            <p class="service-desc">Respectful coverage of cultural and spiritual ceremonies.</p>
-          </div>
+        <div class="col-md-6 service-card">
+          <h5>Religious Ceremonies</h5>
+          <p>Respectful coverage of cultural and spiritual ceremonies.</p>
+          <a href="contact.html?service=Religious%20Ceremonies" class="btn btn-light btn-sm">Book Now</a>
         </div>
-        <div class="col-md-4">
-          <div class="service-card">
-            <i class="fas fa-briefcase service-icon"></i>
-            <h5>Corporate Events</h5>
-            <p class="service-desc">Professional video for business events and conferences.</p>
-          </div>
+        <div class="col-md-6 service-card">
+          <h5>Corporate and Business Events</h5>
+          <p>Conference, launches & professional events coverage.</p>
+          <a href="contact.html?service=Corporate%20and%20Business%20Events" class="btn btn-light btn-sm">Book Now</a>
         </div>
-        <div class="col-md-4">
-          <div class="service-card">
-            <i class="fas fa-graduation-cap service-icon"></i>
-            <h5>Preschool and School Functions</h5>
-            <p class="service-desc">Capture academic milestones and memorable performances.</p>
-          </div>
+        <div class="col-md-6 service-card">
+          <h5>Preschool and University Functions</h5>
+          <p>Coverage for school events, graduations, and educational functions.</p>
+          <a href="contact.html?service=Preschool%20and%20University%20Functions" class="btn btn-light btn-sm">Book Now</a>
         </div>
-        <div class="col-md-4">
-          <div class="service-card">
-            <i class="fas fa-video service-icon"></i>
-            <h5>Live Streaming</h5>
-            <p class="service-desc">Broadcast events online with professional quality.</p>
-          </div>
+        <div class="col-md-6 service-card">
+          <h5>Live Streaming</h5>
+          <p>Broadcast your events live with professional quality.</p>
+          <a href="contact.html?service=Live%20Streaming" class="btn btn-light btn-sm">Book Now</a>
         </div>
-        <div class="col-md-4">
-          <div class="service-card">
-            <i class="fas fa-film service-icon"></i>
-            <h5>Documentaries</h5>
-            <p class="service-desc">Tell powerful stories through creative documentaries.</p>
-          </div>
+        <div class="col-md-6 service-card">
+          <h5>Documentaries</h5>
+          <p>Create compelling stories through documentary films.</p>
+          <a href="contact.html?service=Documentaries" class="btn btn-light btn-sm">Book Now</a>
         </div>
-        <div class="col-md-4">
-          <div class="service-card">
-            <i class="fas fa-birthday-cake service-icon"></i>
-            <h5>Personal Milestones</h5>
-            <p class="service-desc">Birthdays, anniversaries, and other life events.</p>
-          </div>
+        <div class="col-md-6 service-card">
+          <h5>Personal Milestones</h5>
+          <p>Capture birthdays, anniversaries, and personal milestones.</p>
+          <a href="contact.html?service=Personal%20Milestones" class="btn btn-light btn-sm">Book Now</a>
         </div>
-        <div class="col-md-4">
-          <div class="service-card">
-            <i class="fas fa-scissors service-icon"></i>
-            <h5>Video Editing</h5>
-            <p class="service-desc">Get professional edits for any type of video.</p>
-          </div>
+        <div class="col-md-6 service-card">
+          <h5>Video Editing</h5>
+          <p>Professional editing services for your videos.</p>
+          <a href="contact.html?service=Video%20Editing" class="btn btn-light btn-sm">Book Now</a>
         </div>
-        <div class="col-md-4">
-          <div class="service-card">
-            <i class="fas fa-music service-icon"></i>
-            <h5>Music Production</h5>
-            <p class="service-desc">High quality audio for your video or music project.</p>
-          </div>
+        <div class="col-md-6 service-card">
+          <h5>Music Production</h5>
+          <p>High-quality music production and sound design.</p>
+          <a href="contact.html?service=Music%20Production" class="btn btn-light btn-sm">Book Now</a>
         </div>
-        <div class="col-md-4">
-          <div class="service-card">
-            <i class="fas fa-camera service-icon"></i>
-            <h5>Custom Shoots</h5>
-            <p class="service-desc">Tailored videography services to your exact need.</p>
-          </div>
+        <div class="col-md-6 service-card">
+          <h5>Custom Shoots</h5>
+          <p>Tailored shoots to fit your unique needs and ideas.</p>
+          <a href="contact.html?service=Custom%20Shoots" class="btn btn-light btn-sm">Book Now</a>
         </div>
-        <div class="col-md-4">
-          <div class="service-card">
-            <i class="fas fa-calendar-check service-icon"></i>
-            <h5>Event Planning</h5>
-            <p class="service-desc">From concept to execution for your event video.</p>
-          </div>
+        <div class="col-md-6 service-card">
+          <h5>Event Planning</h5>
+          <p>Complete event management and planning services.</p>
+          <a href="contact.html?service=Event%20Planning" class="btn btn-light btn-sm">Book Now</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="text-center text-white py-4" style="background-color: rgba(1, 57, 180, 0.9);">
-    <p class="mb-1">© 2025 PARAGON. All Rights Reserved.</p>
-    <p class="mb-2 small">
-      📍 Ratnapura, Sri Lanka |
-      📞 <a href="tel:+94742323200" class="text-white small">074 232 3200</a> |
-      📧 <a href="mailto:paragon2k25@gmail.com" class="text-white small">paragon2k25@gmail.com</a>
+  <section id="contact" class="mt-5">
+    <h3>Contact Us</h3>
+    <form class="container">
+      <div class="mb-3">
+        <input type="text" class="form-control" placeholder="Name" required />
+      </div>
+      <div class="mb-3">
+        <input type="email" class="form-control" placeholder="Email" required />
+      </div>
+      <div class="mb-3">
+        <input type="tel" class="form-control" placeholder="Phone Number" required />
+      </div>
+      <div class="mb-3">
+        <textarea class="form-control" rows="4" placeholder="Message" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-warning">Send Message</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 PARAGON. All Rights Reserved.</p>
+    <p>
+      📍 Ratnapura, Sri Lanka <br>
+      📞 <a href="tel:+94742323200">074 232 3200</a> <br>
+      📧 <a href="mailto:paragon2k25@gmail.com">paragon2k25@gmail.com</a>
     </p>
-    <div class="d-flex justify-content-center gap-4">
-      <a href="https://www.facebook.com/profile.php?id=61574555820679" target="_blank" class="text-white fs-4"><i class="tps://wa.me/94742323200" target="_blank" class="text-white fs-4"><i class="fab fa-whatsapp"></et/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js
+    <div>
+      <a href="https://www.facebook.com/profile.php?id=61574555820679" target="_blank"><i class="fab fa-facebook-f"></it="_blank"><i class323200" target="_blank"><i class="fab fa-whatsapp"></i//cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js
 </body>
 </html>
