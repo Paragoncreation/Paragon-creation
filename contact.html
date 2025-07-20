@@ -1,294 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>PARAGON | Contact</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', sans-serif;
-            background: url('back.png') center/cover no-repeat fixed;
-            color: white;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PARAGON | Contact</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('back.png') center/cover no-repeat fixed;
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
 
-        body::before {
-            content: "";
-            position: fixed;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.75);
-            z-index: -1;
-        }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.75);
+      z-index: -1;
+    }
 
-        nav.navbar {
-            background: rgba(1, 57, 180, 0.85);
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 10;
-        }
+    nav.navbar {
+      background: rgba(1, 57, 180, 0.85);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 10;
+    }
 
-        nav .nav-link {
-            color: white !important;
-            font-weight: 600;
-        }
+    nav .nav-link {
+      color: white !important;
+      font-weight: 600;
+    }
 
-        nav .nav-link:hover {
-            color: #ffd700 !important;
-        }
+    nav .nav-link:hover {
+      color: #ffd700 !important;
+    }
 
-        main.container {
-            margin: 80px auto 140px auto;
-            flex-grow: 1;
-            max-width: 600px;
-            background: rgba(0, 0, 0, 0.7);
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
-        }
+    main.container {
+      margin: 80px auto 140px auto;
+      flex-grow: 1;
+      max-width: 600px;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+    }
 
-        h2 {
-            text-align: center;
-            color: #ffd700;
-            margin-bottom: 30px;
-            font-weight: 700;
-        }
+    h2 {
+      text-align: center;
+      color: #ffd700;
+      margin-bottom: 30px;
+      font-weight: 700;
+    }
 
-        label {
-            color: #ddd;
-            font-weight: 600;
-        }
+    label {
+      color: #ddd;
+      font-weight: 600;
+    }
 
-        input.form-control,
-        textarea.form-control {
-            background: rgba(0, 0, 0, 0.5) !important;
-            border: 1px solid #ffd700 !important;
-            color: #ffd700 !important;
-            border-radius: 6px;
-        }
+    input.form-control,
+    textarea.form-control {
+      background: rgba(0, 0, 0, 0.5) !important;
+      border: 1px solid #ffd700 !important;
+      color: #ffd700 !important;
+      border-radius: 6px;
+    }
 
-        input.form-control:focus,
-        textarea.form-control:focus {
-            background: rgba(0, 0, 0, 0.7) !important;
-            border-color: #ffd700 !important;
-            outline: none;
-            box-shadow: 0 0 8px #ffd700;
-            color: white !important;
-        }
+    input.form-control:focus,
+    textarea.form-control:focus {
+      background: rgba(0, 0, 0, 0.7) !important;
+      border-color: #ffd700 !important;
+      outline: none;
+      box-shadow: 0 0 8px #ffd700;
+      color: white !important;
+    }
 
-        ::placeholder {
-            color: #ccc !important;
-        }
+    ::placeholder {
+      color: #ccc !important;
+    }
 
-        button.btn-primary {
-            background: #0139b4;
-            border: none;
-            width: 100%;
-            padding: 12px;
-            font-weight: 700;
-            border-radius: 8px;
-            transition: 0.2s;
-            color: white;
-        }
+    button.btn-primary {
+      background: #0139b4;
+      border: none;
+      width: 100%;
+      padding: 12px;
+      font-weight: 700;
+      border-radius: 8px;
+      transition: 0.2s;
+      color: white;
+    }
 
-        button.btn-primary:hover {
-            background: #002780;
-            transform: scale(1.03);
-        }
+    button.btn-primary:hover {
+      background: #002780;
+      transform: scale(1.03);
+    }
 
-        .back-home {
-            display: inline-block;
-            color: #ffd700;
-            font-weight: 700;
-            margin-bottom: 20px;
-            text-decoration: none;
-        }
+    .back-home {
+      display: inline-block;
+      color: #ffd700;
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-decoration: none;
+    }
 
-        .back-home:hover {
-            color: white;
-        }
+    .back-home:hover {
+      color: white;
+    }
 
-        footer {
-            background-color: rgba(1, 57, 180, 0.9);
-            padding: 20px 10px;
-            color: white;
-            text-align: center;
-            font-size: 0.95rem;
-        }
+    footer {
+      background-color: rgba(1, 57, 180, 0.9);
+      padding: 20px 10px;
+      color: white;
+      text-align: center;
+      font-size: 0.95rem;
+    }
 
-        footer .social-icon {
-            margin: 0 10px;
-            color: white;
-            font-size: 1.4rem;
-            transition: color 0.3s;
-        }
+    footer .social-icon {
+      margin: 0 10px;
+      color: white;
+      font-size: 1.4rem;
+      transition: color 0.3s;
+    }
 
-        footer .social-icon:hover {
-            color: #ffd700;
-        }
+    footer .social-icon:hover {
+      color: #ffd700;
+    }
 
-        footer a {
-            text-decoration: none;
-        }
+    footer a {
+      text-decoration: none;
+    }
 
-        .budget-range {
-            margin-top: 10px;
-        }
+    .budget-range {
+      margin-top: 10px;
+    }
 
-        .budget-display {
-            font-size: 1.2rem;
-            color: #ffd700;
-            font-weight: 700;
-            text-align: center;
-            margin-top: 10px;
-        }
+    .budget-display {
+      font-size: 1.2rem;
+      color: #ffd700;
+      font-weight: 700;
+      text-align: center;
+      margin-top: 10px;
+    }
 
-        .range-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    .range-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-        .range-container input {
-            width: 45%;
-        }
+    .range-container input {
+      width: 45%;
+    }
 
-    </style>
+  </style>
 </head>
-
 <body>
 
-    <nav class="navbar navbar-expand-lg px-3">
-        <a class="navbar-brand text-white" href="index.html">
-            <img src="logo.png" height="50" alt="Logo">
-        </a>
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
-            </ul>
-        </div>
-    </nav>
+<nav class="navbar navbar-expand-lg px-3">
+  <a class="navbar-brand text-white" href="index.html">
+    <img src="logo.png" height="50" alt="Logo">
+  </a>
+  <div class="collapse navbar-collapse">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
+    </ul>
+  </div>
+</nav>
 
-    <main class="container">
-        <a href="index.html" class="back-home"><i class="fas fa-arrow-left"></i> Back to Home</a>
-        <h2>Contact Us</h2>
-        <form id="contactForm">
-            <div class="mb-3">
-                <label for="service">Service</label>
-                <select id="service" class="form-control" required>
-                    <option value="Website Development">Website Development</option>
-                    <option value="App Development">App Development</option>
-                    <option value="Digital Marketing">Digital Marketing</option>
-                    <option value="Graphic Design">Graphic Design</option>
-                    <option value="SEO Services">SEO Services</option>
-                    <option value="General Inquiry">General Inquiry</option>
-                </select>
-            </div>
-            <div class="mb-3">
-                <label for="name">Name</label>
-                <input id="name" class="form-control" type="text" placeholder="Your name" required />
-            </div>
-            <div class="mb-3">
-                <label for="phone">Phone Number</label>
-                <input id="phone" class="form-control" type="tel" placeholder="Your phone number" required />
-            </div>
-            <div class="mb-3">
-                <label for="email">Email</label>
-                <input id="email" class="form-control" type="email" placeholder="Your email" required />
-            </div>
+<main class="container">
+  <a href="index.html" class="back-home"><i class="fas fa-arrow-left"></i> Back to Home</a>
+  <h2>Contact Us</h2>
+  <form id="contactForm">
+    <div class="mb-3">
+      <label for="service">Service</label>
+      <input id="service" class="form-control" type="text" readonly />
+    </div>
+    <div class="mb-3">
+      <label for="name">Name</label>
+      <input id="name" class="form-control" type="text" placeholder="Your name" required />
+    </div>
+    <div class="mb-3">
+      <label for="phone">Phone Number</label>
+      <input id="phone" class="form-control" type="tel" placeholder="Your phone number" required />
+    </div>
+    <div class="mb-3">
+      <label for="email">Email</label>
+      <input id="email" class="form-control" type="email" placeholder="Your email" required />
+    </div>
+    <div class="mb-3">
+      <label for="budget">Estimated Budget (LKR)</label>
+      <input id="budget" class="form-control" type="number" placeholder="Your budget" min="0" />
+    </div>
+    <div class="mb-3">
+      <label for="message">Message</label>
+      <textarea id="message" class="form-control" rows="4" placeholder="Your message" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</main>
 
-            <div class="mb-3">
-                <label for="budget">Estimated Budget (LKR)</label>
-                <div class="range-container">
-                    <div>
-                        <label for="minBudget">Min</label>
-                        <input id="minBudget" type="number" class="form-control" placeholder="Min" min="0" value="0" oninput="updateRange()" />
-                    </div>
-                    <div>
-                        <label for="maxBudget">Max</label>
-                        <input id="maxBudget" type="number" class="form-control" placeholder="Max" min="0" value="0" oninput="updateRange()" />
-                    </div>
-                </div>
-                <div class="budget-display" id="budgetDisplay">Min: LKR 0 | Max: LKR 0 </div>
-            </div>
+<footer>
+  <p class="mb-1">© 2025 PARAGON. All Rights Reserved.</p>
+  <p class="mb-2 small">
+    📍 Ratnapura, Sri Lanka |
+    📞 <a href="tel:+94742323200" class="text-white small">074 232 3200</a> |
+    📧 <a href="mailto:paragon2k25@gmail.com" class="text-white small">paragon2k25@gmail.com</a>
+  </p>
+  <div class="d-flex justify-content-center gap-4">
+    <a href="https://www.facebook.com/profile.php?id=61574555820679" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://youtube.com/@paragoncreation" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
+    <a href="https://wa.me/94742323200" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+  </div>
+</footer>
 
-            <div class="mb-3">
-                <label for="message">Message</label>
-                <textarea id="message" class="form-control" rows="4" placeholder="Your message" required></textarea>
-            </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.5.0/dist/email.min.js"></script>
 
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-    </main>
+<script>
+  emailjs.init("eHY0Md68idVa8exU5"); // User ID from EmailJS
 
-    <footer>
-        <p class="mb-1">© 2025 PARAGON. All Rights Reserved.</p>
-        <p class="mb-2 small">
-            📍 Ratnapura, Sri Lanka |
-            📞 <a href="tel:+94742323200" class="text-white small">074 232 3200</a> |
-            📧 <a href="mailto:paragon2k25@gmail.com" class="text-white small">paragon2k25@gmail.com</a>
-        </p>
-        <div class="d-flex justify-content-center gap-4">
-            <a href="https://www.facebook.com/profile.php?id=61574555820679" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://youtube.com/@paragoncreation" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
-            <a href="https://wa.me/94742323200" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
-        </div>
-    </footer>
+  // Function to update range display
+  function updateRange() {
+    const minBudget = document.getElementById('minBudget').value;
+    const maxBudget = document.getElementById('maxBudget').value;
+    document.getElementById('budgetDisplay').innerHTML = `Min: LKR ${formatNumber(minBudget)} | Max: LKR ${formatNumber(maxBudget)}`;
+  }
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
-    <script>
-        emailjs.init("eHY0Md68idVa8exU5");
+  // Function to format numbers with commas
+  function formatNumber(num) {
+    return Number(num).toLocaleString();
+  }
 
-        document.addEventListener('DOMContentLoaded', () => {
-            // On form submit, send email using EmailJS
-            document.getElementById('contactForm').addEventListener('submit', function (e) {
-                e.preventDefault();
+  // Initial display update
+  updateRange();
 
-                const service = document.getElementById('service').value;
-                const templateParams = {
-                    name: document.getElementById('name').value,
-                    phone: document.getElementById('phone').value,
-                    email: document.getElementById('email').value,
-                    minBudget: document.getElementById('minBudget').value,
-                    maxBudget: document.getElementById('maxBudget').value,
-                    message: document.getElementById('message').value,
-                    service: service
-                };
+  document.addEventListener('DOMContentLoaded', () => {
+    const svc = new URLSearchParams(window.location.search).get('service');
+    document.getElementById('service').value = svc ? decodeURIComponent(svc) : 'General Inquiry';
 
-                emailjs.send('service_oxu0p6t', 'template_xlqhesi', templateParams)
-                    .then(function (response) {
-                        alert('Thank you! Your message has been sent successfully!');
-                        document.getElementById('contactForm').reset();
-                    }, function (error) {
-                        alert('Oops! Something went wrong. Please try again.');
-                    });
-            });
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const templateParams = {
+        name: document.getElementById('name').value,
+        phone: document.getElementById('phone').value,
+        email: document.getElementById('email').value,
+        minBudget: document.getElementById('minBudget').value,
+        maxBudget: document.getElementById('maxBudget').value,
+        message: document.getElementById('message').value,
+        service: document.getElementById('service').value,
+      };
+
+      emailjs.send('service_oxu0p6t', 'template_xlqhesi', templateParams)
+        .then(function (response) {
+          alert('Thank you! Your message has been sent successfully!');
+          document.getElementById('contactForm').reset();
+        }, function (error) {
+          alert('Oops! Something went wrong. Please try again.');
         });
-
-        // Function to update range display
-        function updateRange() {
-            const minBudget = document.getElementById('minBudget').value;
-            const maxBudget = document.getElementById('maxBudget').value;
-            document.getElementById('budgetDisplay').innerHTML = `Min: LKR ${formatNumber(minBudget)} | Max: LKR ${formatNumber(maxBudget)}`;
-        }
-
-        // Function to format numbers with commas
-        function formatNumber(num) {
-            return Number(num).toLocaleString();
-        }
-
-        // Initial display update
-        updateRange();
-    </script>
+    });
+  });
+</script>
 
 </body>
-
 </html>
