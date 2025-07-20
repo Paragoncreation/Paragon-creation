@@ -135,6 +135,28 @@
     footer a {
       text-decoration: none;
     }
+
+    .budget-range {
+      margin-top: 10px;
+    }
+
+    .budget-display {
+      font-size: 1.2rem;
+      color: #ffd700;
+      font-weight: 700;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .range-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .range-container input {
+      width: 45%;
+    }
   </style>
 </head>
 <body>
@@ -171,14 +193,30 @@
       <label for="email">Email</label>
       <input id="email" class="form-control" type="email" placeholder="Your email" required />
     </div>
+
+    <!-- Range for Minimum and Maximum Budget -->
     <div class="mb-3">
       <label for="budget">Estimated Budget (LKR)</label>
-      <input id="budget" class="form-control" type="number" placeholder="Your budget" min="0" />
+      <div class="range-container">
+        <!-- Min Budget input field -->
+        <div>
+          <label for="minBudget">Min</label>
+          <input id="minBudget" type="number" class="form-control" placeholder="Min" min="0" value="0" oninput="updateRange()" />
+        </div>
+        <!-- Max Budget input field -->
+        <div>
+          <label for="maxBudget">Max</label>
+          <input id="maxBudget" type="number" class="form-control" placeholder="Max" min="0" value="0" oninput="updateRange()" />
+        </div>
+      </div>
+      <div class="budget-display" id="budgetDisplay">Min: LKR 0 | Max: LKR 0 </div>
     </div>
+
     <div class="mb-3">
       <label for="message">Message</label>
       <textarea id="message" class="form-control" rows="4" placeholder="Your message" required></textarea>
     </div>
+
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
 </main>
@@ -209,10 +247,50 @@
 
     document.getElementById('contactForm').addEventListener('submit', e => {
       e.preventDefault();
-      alert(`Thank you, ${document.getElementById('name').value}! We received your request for "${document.getElementById('service').value}".`);
-      e.target.reset();
+      
+      // Collect form data
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const phone = document.getElementById('phone').value;
+      const service = document.getElementById('service').value;
+      const message = document.getElementById('message').value;
+
+      // Send email via SendGrid API with dynamic template data
+      const sgMail = require('@sendgrid/mail');
+      sgMail.setApiKey('your-sendgrid-api-key');
+
+      const msg = {
+        to: 'recipient-email@example.com',
+        from: 'your-email@example.com',
+        templateId: 'template_xlqhesi',
+        dynamic_template_data: {
+          name: name,
+          email: email,
+          phone: phone,
+          service: service,
+          message: message
+        }
+      };
+
+      sgMail.send(msg).then(() => {
+        alert('Email sent successfully!');
+      }).catch((error) => {
+        console.error('Error sending email:', error);
+      });
     });
   });
+
+  function updateRange() {
+    const minBudget = document.getElementById('minBudget').value;
+    const maxBudget = document.getElementById('maxBudget').value;
+    document.getElementById('budgetDisplay').innerHTML = `Min: LKR ${formatNumber(minBudget)} | Max: LKR ${formatNumber(maxBudget)}`;
+  }
+
+  function formatNumber(num) {
+    return Number(num).toLocaleString();
+  }
+
+  updateRange();
 </script>
 
 </body>
